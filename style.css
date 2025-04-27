@@ -14,10 +14,11 @@
     justify-content: center;
     align-items: center;
     transition: background 0.5s, color 0.5s;
+    padding: 10px;
   }
   
   #chatbot-app {
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     padding: 20px;
@@ -32,16 +33,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
   }
   
   .header-buttons button {
-    margin-left: 10px;
+    margin-left: 8px;
   }
   
   #chat-area {
     flex: 1;
     overflow-y: auto;
-    margin: 20px 0;
+    margin: 15px 0;
     padding: 15px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 12px;
@@ -52,7 +54,7 @@
   
   .input-area {
     display: flex;
-    gap: 10px;
+    gap: 8px;
   }
   
   #user-input {
@@ -61,10 +63,11 @@
     border-radius: 10px;
     border: none;
     outline: none;
+    font-size: 16px;
   }
   
   #send-btn, #voice-btn, #reset-chat, #toggle-mode, #export-chat {
-    padding: 10px 15px;
+    padding: 10px 12px;
     border-radius: 10px;
     border: none;
     background: #34ace0;
@@ -74,12 +77,13 @@
   }
   
   .message {
-    max-width: 70%;
-    margin: 10px 0;
+    max-width: 75%;
+    margin: 8px 0;
     padding: 10px 15px;
     border-radius: 15px;
     word-wrap: break-word;
     animation: fadeIn 0.3s ease-in;
+    font-size: 15px;
   }
   
   .user {
@@ -107,14 +111,38 @@
   }
   
   .light-mode #chat-area {
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.05);
   }
   
+  /* Mobile Responsive Adjustments */
   @media (max-width: 600px) {
+    body {
+      padding: 5px;
+    }
+  
     #chatbot-app {
-      width: 95%;
+      width: 100%;
       height: 95vh;
       padding: 15px;
+    }
+  
+    .header h1 {
+      font-size: 20px;
+    }
+  
+    #user-input {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    #send-btn, #voice-btn {
+      font-size: 16px;
+      padding: 8px 10px;
+    }
+  
+    .message {
+      font-size: 14px;
+      padding: 8px 12px;
     }
   }
   
