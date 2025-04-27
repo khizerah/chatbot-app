@@ -1,0 +1,125 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #05d1e0;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  #chatbot-app {
+    width: 90%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-buttons button {
+    margin-left: 10px;
+  }
+  
+  #chat-area {
+    flex: 1;
+    overflow-y: auto;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-area {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #user-input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  #send-btn, #voice-btn, #reset-chat, #toggle-mode, #export-chat {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background: #34ace0;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .message {
+    max-width: 70%;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  .user {
+    background: #4a69bd;
+    align-self: flex-end;
+    text-align: right;
+    color: white;
+  }
+  
+  .bot {
+    background: #2ecc71;
+    align-self: flex-start;
+    text-align: left;
+    color: white;
+  }
+  
+  .typing {
+    font-style: italic;
+    opacity: 0.7;
+  }
+  
+  .light-mode {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: black;
+  }
+  
+  .light-mode #chat-area {
+    background: rgba(0,0,0,0.05);
+  }
+  
+  @media (max-width: 600px) {
+    #chatbot-app {
+      width: 95%;
+      height: 95vh;
+      padding: 15px;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
